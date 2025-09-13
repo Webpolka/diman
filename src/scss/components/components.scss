@@ -1,0 +1,90 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+COMPONENTS
+--------------------------------------------------------------------------------------------------------------------------------*/
+[class*="_lang"] {
+	display: inline-flex;
+	align-items: center;
+	gap: rem(10);
+
+	.btn-lang {
+		font-weight: 400;
+		font-size: rem(12);
+		color: var(--white);
+
+		opacity: 0.4;
+		transition: opacity 0.3s ease-in-out;
+
+		&:hover {
+			opacity: 0.55;
+		}
+		&.active {
+			opacity: 0.8;
+		}
+	}
+}
+
+.btn-callback {
+	font-weight: 700;
+	font-size: rem(12);
+	color: #4e421b;
+
+	border-radius: rem(20);
+	padding-inline: rem(20);
+	min-height: rem(34);
+
+	display: flex;
+	align-items: center;
+
+	background: linear-gradient(303deg, #f4de91 0%, #e4c559 42.31%, #e1c150 49%, #f0d883 68.27%, #f5d668 100%);
+}
+
+// BURGER BUTTON
+.burger {
+	position: relative;
+	display: inline-block;
+
+	width: rem(20);
+	height: rem(13);
+
+	flex-shrink: 0;
+
+	cursor: pointer;
+
+	span,
+	&::before,
+	&::after {
+		display: block;
+		content: "";
+		transition: all 0.3s ease-in-out;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 1.5px;
+		background-color: var(--black);
+		border-radius: rem(10);
+	}
+	&::before {
+		top: 0;
+	}
+	&::after {
+		bottom: 0;
+	}
+	span {
+		top: 50%;
+		transform: translateY(-65%);
+	}
+	&.active span {
+		width: 0;
+		background-color: var(--white);
+	}
+	&.active::before {
+		top: 50%;
+		transform: translateY(-50%) rotate(-45deg);
+		background-color: var(--white);
+	}
+	&.active::after {
+		bottom: 50%;
+		transform: translateY(50%) rotate(45deg);
+		background-color: var(--white);
+	}
+}

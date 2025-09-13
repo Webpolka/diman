@@ -1,0 +1,92 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+	.container{
+		min-height: rem(222);
+		background-color: var(--black);
+
+		@include lg{
+			min-height: rem(155);
+		}		
+
+		@include md{
+			min-height: rem(120);
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		padding-block: rem(50);
+
+		@include lg{
+			padding-block: rem(35);
+		}
+
+		@include sm{
+			padding-top: rem(25);
+			padding-bottom: rem(35);
+		}
+	}
+
+	&__logo {
+		font-weight: 700;
+		font-size: rem(46);
+		color: var(--white);
+
+		@include lg{
+			font-size: rem(36);
+		}
+
+		@include md{
+			font-size: rem(28);
+		}
+	}
+
+	&__group {
+		display: inline-flex;
+		flex-direction: column;
+		gap: rem(20);
+
+		@include sm{
+			gap: rem(15);
+		}
+	}
+
+	&__politic {
+		font-weight: normal;
+		font-size: rem(12);
+		color: var(--white);
+		opacity: 0.4;
+		transition: opacity 0.3s ease-in-out;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__nav {
+		ul {
+			display: inline-flex;
+			flex-direction: column;
+			gap: rem(20);
+
+			@include sm{
+				gap: rem(10);
+			}
+		}
+		li a {
+			font-weight: 400;
+			font-size: rem(12);
+			color: var(--white);
+			opacity: 0.4;
+			transition: opacity 0.3s ease-in-out;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+}
