@@ -2,17 +2,14 @@
 FOOTER
 --------------------------------------------------------------------------------------------------------------------------------*/
 .footer {
-	.container{
-		min-height: rem(222);
-		background-color: var(--black);
+	background-color: var(--black);
 
-		@include lg{
+	.container {
+		min-height: rem(222);
+
+		@include lg {
 			min-height: rem(155);
 		}		
-
-		@include md{
-			min-height: rem(120);
-		}
 	}
 
 	&__row {
@@ -21,14 +18,10 @@ FOOTER
 
 		padding-block: rem(50);
 
-		@include lg{
-			padding-block: rem(35);
-		}
-
-		@include sm{
-			padding-top: rem(25);
-			padding-bottom: rem(35);
-		}
+		// @include lg {
+		// 	padding-block: rem(45);
+		// }
+		
 	}
 
 	&__logo {
@@ -36,11 +29,11 @@ FOOTER
 		font-size: rem(46);
 		color: var(--white);
 
-		@include lg{
+		@include lg {
 			font-size: rem(36);
 		}
 
-		@include md{
+		@include md {
 			font-size: rem(28);
 		}
 	}
@@ -50,7 +43,7 @@ FOOTER
 		flex-direction: column;
 		gap: rem(20);
 
-		@include sm{
+		@include sm {
 			gap: rem(15);
 		}
 	}
@@ -73,7 +66,7 @@ FOOTER
 			flex-direction: column;
 			gap: rem(20);
 
-			@include sm{
+			@include sm {
 				gap: rem(10);
 			}
 		}

@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 ROOT
 --------------------------------------------------------------------------------------------------------------------------------*/
-:root {	
+:root {
 	--site-width: 1440px;
 	--container-width: 1240px;
 
@@ -10,12 +10,15 @@ ROOT
 	--sm-padding: 15px;
 
 	--font-main: "TildaSans", sans-serif;
-	--font-decor: 'Playfair', sans-serif;
+	--font-decor: "Playfair", sans-serif;
 
 	--black: #000;
 	--white: #fff;
+	--gold: #c69d07;
 
 	--scrollbar: gray;
 	--scrollbar-track: gray;
-	--scrollbar-thumb: rgb(18, 18, 18);	
+	--scrollbar-thumb: rgb(18, 18, 18);
+
+	--gradient: linear-gradient(303deg, #f4de91 0%, #e4c559 42.31%, #e1c150 49%, #f0d883 68.27%, #f5d668 100%);
 }

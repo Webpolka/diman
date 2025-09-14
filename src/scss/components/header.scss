@@ -6,7 +6,7 @@ HEADER
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 5;
 
 	&__row {
 		display: flex;
@@ -81,7 +81,7 @@ HEADER
 
 				@media (min-width: 768px) {
 					&:hover {
-						& > ul.submenu {
+						& > ul.submenu {							
 							opacity: 1;
 							visibility: visible;
 						}

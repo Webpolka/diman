@@ -1,0 +1,65 @@
+/* --------------------------------------------------------------------------------------------------------------------------
+MAIN FIRST - 1
+--------------------------------------------------------------------------------------------------------------------------------*/
+.main-first {
+	&__block {
+		color: var(--white);
+		position: relative;
+
+		min-height: rem(712);
+
+		background-image: url("../../images/main/webp/main-1-bg.webp");
+		background-position: 65% bottom;
+
+		border-radius: 0 0 rem(100) rem(100);
+		@include md {
+			border-radius: 0 0 rem(50) rem(50);
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-image: url("../../images/blind-left.webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+
+			aspect-ratio: 42/143;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url("../../images/blind-right.webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+
+			aspect-ratio: 42/143;
+		}
+	}
+
+	&__description {
+		z-index: 1;
+
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: 140%;
+
+		max-width: rem(270);
+
+		position: absolute;
+		top: 45%;
+		left: 15%;
+
+		@include sm {
+			text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+		}
+	}
+}

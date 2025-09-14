@@ -1,0 +1,123 @@
+/* --------------------------------------------------------------------------------------------------------------------------
+MAIN SYSTEM --- BLOCK 7
+--------------------------------------------------------------------------------------------------------------------------------*/
+.main-system {
+	color: var(--white);
+
+	.section__title {
+		margin-bottom: rem(58);
+	}
+
+	&__block {
+		min-height: rem(668);		
+		background-image: url("../../images/main/webp/main-7-bg.webp");
+	}
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		gap: rem(75);
+
+		&--top {
+			margin-bottom: rem(40);
+		}
+
+		@include xl {
+			gap: rem(40) rem(20);
+		}
+
+		@include md {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		@media (max-width: 700px) {
+			gap: rem(40) 0;
+
+            margin-right: rem(-10);
+            margin-left: rem(-10);
+		}
+	}
+
+	&__item:last-child::after {
+		content: initial;
+	}
+	&__item.second::after {
+		@include md {
+			content: initial;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media (max-width: 700px) {
+			width: 50%;
+            padding-left: rem(10);
+            padding-right: rem(10);
+		}
+
+		&:after {
+			position: absolute;
+			top: rem(31);
+			left: 50%;
+
+			content: "";
+			height: 2px;
+
+			border-bottom: 1px dashed white;
+			border-image: repeating-linear-gradient(
+				to right,
+				#fff 0,
+				#fff 7px,
+				/* длина штриха */ transparent 7px,
+				transparent 20px /* зазор между штрихами */
+			);
+			border-image-slice: 1;
+
+			width: calc(100% + 75px);
+
+			@include xl {
+				width: calc(100% + 20px);
+			}		
+		}
+	}
+
+	&__count {
+		position: relative;
+		z-index: 1;
+		content: counter(myCounter); /* вставить номер */
+
+		font-weight: 700;
+		font-size: rem(20);
+		line-height: 100%;
+		color: #4e421b;
+
+		aspect-ratio: 1/1;
+		width: rem(62);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border-radius: 50%;
+		background: var(--gradient);
+
+		margin-bottom: rem(15);
+	}
+
+	&__description {
+		font-weight: 700;
+		font-size: rem(20);
+		line-height: 120%;
+		text-align: center;
+
+		max-width: rem(270);
+
+        @include sm{
+            font-size: rem(16);
+        }
+	}
+}

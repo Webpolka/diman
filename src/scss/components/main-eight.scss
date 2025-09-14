@@ -1,0 +1,27 @@
+/* --------------------------------------------------------------------------------------------------------------------------
+MAIN CASES --- BLOCK 8
+--------------------------------------------------------------------------------------------------------------------------------*/
+.main-cases {
+	color: var(--black);
+
+	.section__title {
+		margin-bottom: rem(65);
+        @include sm{
+            margin-bottom: rem(40);
+        }
+	}
+
+	&__part {        
+		&:before {					
+			background-image: url("../../images/main/webp/main-8-bg.webp");			
+		}
+	}
+
+	.btn-accent {
+        margin-top: rem(60);
+		margin-inline: auto;
+        @include sm{
+            margin-top: rem(40);
+        }
+	}
+}
