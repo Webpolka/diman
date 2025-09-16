@@ -9,12 +9,18 @@ MAIN WITH WE --- 5
 		background-image: url("../../images/main/webp/main-5-bg.webp");	
 	}
 
+	.section__title{
+		margin-bottom: rem(70);
+		@include sm{
+			margin-bottom: rem(40);
+		}
+	}
+
 	&__row {
 		counter-reset: myCounter; /* сбросить счетчик */
 		list-style: none; /* убрать стандартные маркеры */
 
-		display: flex;
-		padding-top: rem(70);
+		display: flex;	
 		justify-content: space-between;
 		gap: rem(60);
 

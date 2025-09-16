@@ -57,6 +57,7 @@ MAIN NEXT STEP --- BLOCK 9
 			font-size: rem(47);
 		}
 		@include sm {
+			margin-bottom: rem(40);
 			font-size: rem(28);
 		}
 		.title-decor {

@@ -3,19 +3,25 @@ MAIN THIRD
 --------------------------------------------------------------------------------------------------------------------------------*/
 .main-whatwedoing {
 	color: var(--white);
-
+	
 	&__block {
 		display: flex;
-		flex-direction: column;		
+		flex-direction: column;
 		min-height: rem(659);
-		background-image: url("../../images/main/webp/main-3-bg.webp");		
+		background-image: url("../../images/main/webp/main-3-bg.webp");
+	}
+
+	.section__title{
+		margin-bottom: rem(70);
+		@include sm{
+			margin-bottom: rem(40);
+		}
 	}
 
 	&__row {
 		position: relative;
 
-		display: flex;
-		padding-top: rem(70);
+		display: flex;		
 		justify-content: space-between;
 		gap: rem(40);
 
@@ -98,9 +104,8 @@ MAIN THIRD
 		left: -30%;
 		top: -50%;
 		@include md {
-            left: -18%;            
+			left: -18%;
 		}
-        
 
 		&-icon {
 			width: 45%;

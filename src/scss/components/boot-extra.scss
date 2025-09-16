@@ -2,19 +2,86 @@
 BOOTSRTAP EXTRA
 --------------------------------------------------------------------------------------------------------------------------------*/
 
-// 16px
+.mb-md-70{
+	@include md{
+	margin-bottom: 70px;	
+	}
+	
+}
+// 40px
 .g-custom-40,
 .gx-custom-40 {
 	--bs-gutter-x: 40px;
-    @include sm{
-        --bs-gutter-x: 10px;
-    }
+	@include sm {
+		--bs-gutter-x: 10px;
+	}
 }
 .g-custom-40,
 .gy-custom-40 {
 	--bs-gutter-y: 40px;
-    @include sm{
-        --bs-gutter-y: 40px;
-    }
+	@include sm {
+		--bs-gutter-y: 40px;
+	}
 }
 
+// 40px
+.g-40,
+.gx-40 {
+	--bs-gutter-x: 40px;
+}
+.g-40,
+.gy-40 {
+	--bs-gutter-y: 40px;
+}
+
+// xl-25px
+.g-xl-25,
+.gx-xl-25 {
+	@include xl {
+		--bs-gutter-x: 25px;
+	}
+}
+.g-xl-25,
+.gy-xl-25 {
+	@include xl {
+		--bs-gutter-y: 25px;
+	}
+}
+
+// 35px
+.g-35,
+.gx-35 {
+	--bs-gutter-x: 35px;
+}
+.g-35,
+.gy-35 {
+	--bs-gutter-y: 35px;
+}
+
+// sm 15
+.g-sm-15,
+.gx-sm-15 {
+	@include sm {
+		--bs-gutter-x: 15px;
+	}
+}
+.g-sm-15,
+.gy-sm-15 {
+	@include sm {
+		--bs-gutter-y: 15px;
+	}
+}
+
+// sm 25
+.g-sm-25,
+.gx-sm-25 {
+	@include sm {
+		--bs-gutter-x: 25px;
+	}
+}
+.g-sm-25,
+.gy-sm-25 {
+	@include sm {
+		--bs-gutter-y: 25px;
+	}
+}
