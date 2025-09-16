@@ -1,0 +1,82 @@
+/* --------------------------------------------------------------------------------------------------------------------------
+PAGE BLOCK --- 5
+--------------------------------------------------------------------------------------------------------------------------------*/
+.simplepage {
+	&__zindex {
+		// position: relative;
+		z-index: 1;
+	}
+
+	&__block {
+		.section__title {
+			color: var(--white);
+		}
+		.section__title {
+			margin-bottom: rem(70);
+
+			@include sm {
+				margin-bottom: rem(40);
+			}
+		}
+
+		min-height: rem(150);
+		background: var(--black);
+		background-image: url("../../images/page/page-block-bg.png");
+		background-size: cover;
+		background-position: 70% center;
+
+		position: relative;
+
+		@include xl {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -37px;				
+				height: rem(500);
+				// height: 50%;
+				background-image: url("../../images/blind-left.webp");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+
+				aspect-ratio: 42/143;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: -37px;				
+				height: rem(500);
+				// height: 50%;
+				background-image: url("../../images/blind-right.webp");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+
+				aspect-ratio: 42/143;
+			}
+		}
+	}
+
+	.white-card-item:nth-child(even) {
+		@include sm {
+			.white-card {
+				justify-self: flex-end;
+			}
+		}
+	}	
+
+	.white-card {
+		@include md {
+			padding: rem(10);
+			gap: rem(10);
+		}
+		@include sm {
+			padding: rem(20);
+			gap: rem(20);
+			width: 80%;
+		}
+	}
+}

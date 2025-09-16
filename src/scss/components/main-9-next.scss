@@ -1,8 +1,8 @@
 /* --------------------------------------------------------------------------------------------------------------------------
 MAIN NEXT STEP --- BLOCK 9
 --------------------------------------------------------------------------------------------------------------------------------*/
-.main-nextstep {	
-	color: var(--white);	
+.main-nextstep {
+	color: var(--white);
 
 	&__block {
 		position: relative;
@@ -26,7 +26,7 @@ MAIN NEXT STEP --- BLOCK 9
 		display: flex;
 		justify-content: space-between;
 		gap: rem(75);
-		
+
 		@media (max-width: 820px) {
 			flex-wrap: wrap;
 			gap: rem(30);
@@ -38,9 +38,9 @@ MAIN NEXT STEP --- BLOCK 9
 			margin-inline: auto;
 		}
 	}
-	&__item:nth-child(2){
+	&__item:nth-child(2) {
 		min-width: rem(387);
-		@include sm{
+		@include sm {
 			min-width: rem(290);
 		}
 	}
@@ -92,6 +92,10 @@ MAIN NEXT STEP --- BLOCK 9
 
 		width: rem(752);
 		aspect-ratio: 148/86;
+		z-index: 1;
+		@include xl {
+			max-width: rem(600);
+		}
 
 		@media (max-width: 820px) {
 			left: 50%;

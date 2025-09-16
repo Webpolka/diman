@@ -104,6 +104,12 @@ COMPONENTS
 	align-items: center;
 
 	background: linear-gradient(303deg, #f4de91 0%, #e4c559 42.31%, #e1c150 49%, #f0d883 68.27%, #f5d668 100%);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		filter: brightness(1.5);
+		box-shadow: 0 0 4px 4px rgb(225, 193, 80, 0.35);
+	}
 }
 
 // BURGER BUTTON
@@ -173,7 +179,7 @@ COMPONENTS
 		font-size: rem(28);
 		text-align: center;
 
-		margin-bottom: rem(15);
+		margin-bottom: rem(5);
 	}
 
 	&__description {
@@ -416,7 +422,7 @@ NUMBERS
 	flex-direction: column;
 	gap: rem(15);
 
-	@include md{
+	@include md {
 		flex-direction: row;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -429,7 +435,7 @@ NUMBERS
 		gap: rem(10);
 		align-items: center;
 
-		@include md{
+		@include md {
 			flex-direction: column;
 		}
 	}
@@ -456,7 +462,7 @@ NUMBERS
 			background: var(--gradient);
 		}
 
-		@include sm{
+		@include sm {
 			width: rem(60);
 		}
 	}
@@ -464,8 +470,169 @@ NUMBERS
 		font-weight: 700;
 		font-size: rem(16);
 		line-height: 120%;
-		@include sm{
+		@include sm {
 			font-size: rem(18);
 		}
+	}
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------
+Playlabel
+----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.playlabel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	font-weight: 700;
+	font-size: rem(20);
+	line-height: 100%;
+	color: #4e421b;
+
+	aspect-ratio: 1/1;
+	max-width: rem(76);
+	width: 17%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 50%;
+	background: var(--gradient);
+	transition: all 0.3s ease-in-out;
+
+	svg {
+		transition: all 0.2s ease-in-out;
+		aspect-ratio: 1/1;
+		width: 33%;
+		margin-left: 2px;
+	}
+
+	&:hover {
+		transform: translate(-50%, -50%) scale(1.2);
+		svg {
+			transform: scale(1.75);
+		}
+	}
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------
+White card
+----------------------------------------------------------------------------------------------------------------------------------------*/
+.white-card {
+	color: var(--black);
+
+	border-radius: rem(20);
+	padding: rem(20);
+	backdrop-filter: blur(19px);
+	background: var(--white);
+
+	display: flex;
+	align-items: center;
+	gap: rem(15);
+
+	min-height: rem(80);
+	height: 100%;
+
+	&--vertical {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		min-height: rem(120);
+		gap: rem(20);
+	}
+
+	&__label {
+		flex-shrink: 0;
+
+		width: rem(40);
+		aspect-ratio: 1/1;
+		border-radius: rem(10);
+		background: linear-gradient(303deg, #f4de91 0%, #e4c559 42.31%, #e1c150 49%, #f0d883 68.27%, #f5d668 100%);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			aspect-ratio: 1/1;
+			width: 51%;
+		}
+
+		@include md {
+			border-radius: rem(6);
+			width: rem(32);
+		}
+	}
+
+	&__description {
+		font-weight: 700;
+		font-size: 16px;
+
+		@include md {
+			font-size: rem(14);
+		}
+
+		@include sm {
+			font-size: rem(15);
+		}
+	}
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------
+Page banner
+----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.page-banner {
+	position: relative;
+	overflow: hidden;
+	max-width: rem(493);
+	aspect-ratio: 1/1;
+	z-index: 1;
+
+	&--video {
+		border-radius: rem(20);
+	}
+
+	@include xl {
+		max-width: rem(300);
+		margin-inline: auto;
+	}
+	img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		overflow: hidden;
+	}
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------
+Page Notation aligned center
+----------------------------------------------------------------------------------------------------------------------------------------*/
+.page-notation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: rem(5);
+	height: 100%;
+
+	&__title {
+		font-weight: 700;
+		font-size: rem(18);
+		color: var(--black);
+
+		@include sm {
+			font-size: rem(15);
+		}
+	}
+	&__text {
+		font-weight: 400;
+		font-size: rem(14);
+		color: var(--black);
+
+		font-size: rem(13);
 	}
 }

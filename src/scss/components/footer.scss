@@ -3,13 +3,15 @@ FOOTER
 --------------------------------------------------------------------------------------------------------------------------------*/
 .footer {
 	background-color: var(--black);
+	position: relative;
+	z-index: 1;
 
 	.container {
 		min-height: rem(222);
 
 		@include lg {
 			min-height: rem(155);
-		}		
+		}
 	}
 
 	&__row {
@@ -17,10 +19,14 @@ FOOTER
 		justify-content: space-between;
 
 		padding-block: rem(50);
+		gap: rem(40);
 
-		// @include lg {
-		// 	padding-block: rem(45);
-		// }
+		@include md{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+
 		
 	}
 
@@ -80,6 +86,30 @@ FOOTER
 			&:hover {
 				opacity: 0.8;
 			}
+		}
+	}
+
+	&__grow-centered {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+
+		min-width: rem(234);
+
+		.btn-accent {
+			width: 100%;
+			justify-content: center;
+		}
+		.btn-accent:nth-child(2),
+		.btn-accent:nth-child(3) {
+			background: var(--white);
 		}
 	}
 }

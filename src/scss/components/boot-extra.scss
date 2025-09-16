@@ -24,6 +24,29 @@ BOOTSRTAP EXTRA
 	}
 }
 
+
+
+// 100px
+.g-100,
+.gx-100 {
+	--bs-gutter-x: 100px;
+}
+.g-100,
+.gy-100 {
+	--bs-gutter-y: 100px;
+}
+
+
+// 20px
+.g-20,
+.gx-20 {
+	--bs-gutter-x: 20px;
+}
+.g-20,
+.gy-20 {
+	--bs-gutter-y: 20px;
+}
+
 // 40px
 .g-40,
 .gx-40 {
@@ -47,6 +70,35 @@ BOOTSRTAP EXTRA
 		--bs-gutter-y: 25px;
 	}
 }
+
+// md-15px
+.g-md-15,
+.gx-md-15 {
+	@include md {
+		--bs-gutter-x: 15px;
+	}
+}
+.g-md-15,
+.gy-md-15 {
+	@include md {
+		--bs-gutter-y: 15px;
+	}
+}
+
+// xl-40px
+.g-xl-40,
+.gx-xl-40 {
+	@include xl {
+		--bs-gutter-x: 40px;
+	}
+}
+.g-xl-40,
+.gy-xl-40 {
+	@include xl {
+		--bs-gutter-y: 40px;
+	}
+}
+
 
 // 35px
 .g-35,
@@ -84,4 +136,35 @@ BOOTSRTAP EXTRA
 	@include sm {
 		--bs-gutter-y: 25px;
 	}
+}
+
+// md 25
+.g-md-25,
+.gx-md-25 {
+	@include md {
+		--bs-gutter-x: 25px;
+	}
+}
+.g-md-25,
+.gy-md-25 {
+	@include md {
+		--bs-gutter-y: 25px;
+	}
+}
+
+
+.sm-hidden{
+    @include sm{
+        display: none;
+    }
+}
+.xl2-hidden{
+    @include xl2{
+        display: none;
+    }
+}
+.lg-hidden{
+    @include lg{
+        display: none;
+    }
 }
