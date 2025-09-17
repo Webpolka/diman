@@ -6,6 +6,9 @@ MAIN WHY WE --- BLOCK 2
 
 	&__part {
 		position: relative;
+
+		padding-block-start: rem(121);
+		padding-block-end: rem(135);
 		&:after {
 			content: "";
 			position: absolute;
@@ -45,7 +48,7 @@ MAIN WHY WE --- BLOCK 2
 		}
 	}
 	.section__title {
-		margin-bottom: rem(30);
+		margin-bottom: rem(33);
 		text-align: left;
 		line-height: 100%;
 
@@ -63,6 +66,7 @@ MAIN WHY WE --- BLOCK 2
 		@include md {
 			max-width: 100%;
 			font-size: rem(36);
+			text-align: center;
 		}
 		.title-decor {
 			// font-size: rem(50);

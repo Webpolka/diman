@@ -17,6 +17,7 @@ COMPONENTS
 		font-style: italic;
 		font-weight: 700;
 		font-size: rem(50);
+		letter-spacing: 1.9px;
 		@include sm {
 			font-size: rem(36);
 		}
@@ -30,7 +31,9 @@ COMPONENTS
 [class*="_block"] {
 	position: relative;
 	z-index: 3;
-	padding-block: rem(100);
+	padding-block-start: rem(103);
+	padding-block-end: rem(103);
+
 	border-radius: rem(100);
 
 	overflow: hidden;
@@ -62,7 +65,7 @@ COMPONENTS
 		background-position: left top;
 	}
 
-	padding-block: rem(120);
+	padding-block: rem(121);
 	@include md {
 		padding-block: rem(70);
 	}
@@ -332,9 +335,38 @@ Cases card
 .cases-card {
 	display: flex;
 	flex-direction: column;
-	gap: rem(15);
+	gap: rem(10);
+	transition: all 0.2s  ease-in-out;
+
+	.playlabel {
+		z-index: 1;
+	}
+	&--video {
+		position: relative;
+		.cases-card__image {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 1;
+				background-color: rgb(198, 157, 7, 0.25);
+			}
+		}
+	}
+
+	&:hover {
+		filter: brightness(1.3);
+		.cases-card__text {
+			color: #412500;			
+		}
+	}
 
 	&__image {
+		position: relative;
+
 		aspect-ratio: 1/1;
 		overflow: hidden;
 		width: 100%;
@@ -346,10 +378,12 @@ Cases card
 		display: flex;
 		align-items: center;
 
+		margin-bottom: rem(10);
+
 		&:hover {
 			border: 1px solid var(--gold);
 			img {
-				transform: scale(1.1);
+				transform: scale(1.05);
 			}
 		}
 
@@ -368,6 +402,8 @@ Cases card
 		flex-wrap: wrap;
 		align-items: center;
 		gap: rem(5);
+
+		margin-bottom: rem(0);
 	}
 
 	&__tag {
@@ -380,22 +416,11 @@ Cases card
 		font-size: rem(10);
 		text-align: center;
 		color: var(--white);
-
-		transition: all 0.3s ease-in-out;
-
-		&:hover {
-			background-color: var(--gold);
-			color: var(--black);
-		}
 	}
 
-	&__link {
+	&__text {
+		transition: all 0.3s ease-in-out;
 		color: var(--black);
-		&:hover {
-			.cases-card__title {
-				color: var(--gold);
-			}
-		}
 	}
 
 	&__title {
@@ -403,9 +428,7 @@ Cases card
 		font-size: rem(20);
 		line-height: 120%;
 
-		transition: all 0.3s ease-in-out;
-
-		margin-bottom: rem(12);
+		margin-bottom: rem(10);
 	}
 
 	&__description {
@@ -420,7 +443,7 @@ NUMBERS
 	color: var(--black);
 	display: flex;
 	flex-direction: column;
-	gap: rem(15);
+	gap: rem(16);
 
 	@include md {
 		flex-direction: row;
@@ -432,7 +455,7 @@ NUMBERS
 
 	&__item {
 		display: inline-flex;
-		gap: rem(10);
+		gap: rem(15);
 		align-items: center;
 
 		@include md {
@@ -441,6 +464,7 @@ NUMBERS
 	}
 
 	&__label {
+		position: relative;
 		aspect-ratio: 1/1;
 		width: rem(42);
 
@@ -456,6 +480,19 @@ NUMBERS
 		color: var(--white);
 
 		background: #262626;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 100%;
+			width: 1px;
+			height: 5px;
+			background-color: var(--black);
+			@include sm {
+				content: none;
+			}
+		}
 
 		&--gold {
 			color: #4e421b;
@@ -502,6 +539,8 @@ Playlabel
 	border-radius: 50%;
 	background: var(--gradient);
 	transition: all 0.3s ease-in-out;
+
+	box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.25);
 
 	svg {
 		transition: all 0.2s ease-in-out;

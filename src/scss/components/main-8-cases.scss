@@ -5,8 +5,10 @@ MAIN CASES --- BLOCK 8
 	color: var(--black);
 
 	.section__title {
-		margin-bottom: rem(70);
+		margin-bottom: rem(60);
+		font-size: rem(50);
 		@include sm {
+			font-size: rem(36);
 			margin-bottom: rem(40);
 		}
 	}
@@ -24,10 +26,12 @@ MAIN CASES --- BLOCK 8
 			background-size: 100%;
 			background-position: center center;
 		}
+
+		padding-block-start: rem(124);
 	}
 
 	.btn-accent {
-		margin-top: rem(60);
+		margin-top: rem(55);
 		margin-inline: auto;
 		@include sm {
 			margin-top: rem(40);

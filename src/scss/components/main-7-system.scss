@@ -5,13 +5,15 @@ MAIN SYSTEM --- BLOCK 7
 	color: var(--white);
 
 	.section__title {
-		margin-bottom: rem(58);
+		margin-bottom: rem(62);
 	}
 
 	&__block {
 		min-height: rem(150);		
 		background: var(--black);
 		background-image: url("../../images/main/webp/main-7-bg.webp");
+		background-size: cover;
+		padding-block-end: rem(97.5);
 	}
 
 	&__row {
@@ -106,7 +108,7 @@ MAIN SYSTEM --- BLOCK 7
 		border-radius: 50%;
 		background: var(--gradient);
 
-		margin-bottom: rem(15);
+		margin-bottom: rem(22);
 	}
 
 	&__description {

@@ -21,9 +21,9 @@ MAIN OUR COMMAND --- BLOCK 4
 	
 	&__header {
 		display: flex;
-		gap: rem(25);
+		gap: rem(33);
 
-		margin-bottom: rem(40);
+		margin-bottom: rem(45);
 
 		@include md{
 			flex-direction: column;
@@ -40,6 +40,7 @@ MAIN OUR COMMAND --- BLOCK 4
 		}		
 	}
 	&__description {
+		padding-top: rem(2);
 		font-weight: 700;
 		font-size: rem(16);
 		color: var(--black);
@@ -63,7 +64,7 @@ MAIN OUR COMMAND --- BLOCK 4
 .command-card {
 	display: flex;
 	flex-direction: column;
-	gap: rem(20);
+	gap: rem(17);
 	@include md {
 		gap: rem(10);
 	}
@@ -80,7 +81,7 @@ MAIN OUR COMMAND --- BLOCK 4
 		display: flex;
 		align-items: center;
 
-		margin-bottom: rem(5);
+		margin-bottom: rem(3);
 
 		@include md{
 			border-radius: rem(12);
@@ -141,7 +142,7 @@ MAIN OUR COMMAND --- BLOCK 4
 
 	&__description {
 		font-weight: 400;
-		font-size: rem(12);
+		font-size: rem(11.5);
 		color: var(--black);
 		
 	}

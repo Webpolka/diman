@@ -5,6 +5,7 @@ MAIN NEXT STEP --- BLOCK 9
 	color: var(--white);
 
 	&__block {
+		padding-block-start: rem(120);
 		position: relative;
 		min-height: rem(599);
 		background-image: url("../../images/main/webp/main-9-bg.webp");
@@ -47,12 +48,18 @@ MAIN NEXT STEP --- BLOCK 9
 
 	.section__title {
 		text-align: left;
+		margin-top: rem(20);
 		margin-bottom: rem(20);
+
+		.title-decor {
+			letter-spacing: 0;
+		}
 
 		@include xl {
 			font-size: rem(36);
 		}
 		@media (max-width: 820px) {
+			margin-top: 0;
 			text-align: center;
 			font-size: rem(47);
 		}

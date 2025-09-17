@@ -12,7 +12,7 @@ MAIN THIRD
 	}
 
 	.section__title{
-		margin-bottom: rem(70);
+		margin-bottom: rem(67);
 		@include sm{
 			margin-bottom: rem(40);
 		}
@@ -47,9 +47,9 @@ MAIN THIRD
 
 		display: flex;
 		flex-direction: column;
-		gap: rem(15);
+		gap: rem(18);
 
-		border-radius: rem(10);
+		border-radius: rem(20);
 		padding: rem(30);
 		min-width: rem(208);
 
@@ -101,8 +101,8 @@ MAIN THIRD
 	}
 
 	.ai {
-		left: -30%;
-		top: -50%;
+		left: -28.9%;
+		top: -47%;
 		@include md {
 			left: -18%;
 		}
@@ -130,8 +130,8 @@ MAIN THIRD
 		}
 	}
 	.tiktok {
-		left: -18%;
-		bottom: rem(-47);
+		left: -16%;
+		bottom: -3.175rem;
 		&-icon {
 			width: 45%;
 			aspect-ratio: 1/1;

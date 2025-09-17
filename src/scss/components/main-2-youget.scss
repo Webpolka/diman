@@ -92,7 +92,7 @@ MAIN YOU GET --- BLOCK 2
 	}
 
 	.section__title {
-		margin-bottom: rem(70);
+		margin-bottom: rem(67);
 
 		@include sm {
 			margin-bottom: rem(40);
@@ -122,6 +122,13 @@ MAIN YOU GET --- BLOCK 2
 		align-items: flex-end;
 	}
 
+	.black-card:nth-of-type(3) {
+		padding-bottom: rem(34);
+		@include md{
+			padding-bottom: rem(20);
+		}
+	}
+
 	.black-card--left {
 		transform: translateX(-20px);
 		@include md {
@@ -144,9 +151,9 @@ MAIN YOU GET --- BLOCK 2
 			aspect-ratio: 1/1;
 			top: 0;
 			left: 0;
-			width: rem(212);
+			width: rem(330);
 
-			transform: translate(-33%, -44%);
+			transform: translate(-37%, -47%);
 
 			background-image: url("../../images/main/webp/main-2-keys.webp");
 			background-repeat: no-repeat;

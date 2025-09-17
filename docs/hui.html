@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Страница Text</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="vendor/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+
+<style>
+    .web-list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+    }
+
+    .web-list a {
+        display: block;
+        font-size: rem(40);
+        font-weight: 700;
+        color: green;
+    }
+
+    .web-list a:hover {
+        color: red;
+    }
+
+    .web-center {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <!-- Logo -->
+                    <a class="header__logo" href="index.html">Next step</a>
+                    <!-- Navigation -->
+
+                    <nav class="header__nav" data-id="transfer-place">
+                        <ul class="menu">
+                            <!-- 1 -->
+                            <li>
+                                <a class="no-event">Услуги</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Брендинг и позиционирование</a></li>
+                                    <li><a href="#">Сайт и лендинг под ключ</a></li>
+                                    <li><a href="#">Контент и соцсети</a></li>
+                                    <li><a href="#">Воронка продаж за 7 дней</a></li>
+                                    <li><a href="#">Автоматизация и AI-интеграция</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="index.html#anchor">Как мы работаем</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="header__group" data-id="transfer-element">
+                        <!-- Bureger close -->
+                        <div class="header__close">
+                            <div class="active burger" id="burger-close">
+                                <span></span>
+                            </div>
+                        </div>
+                        <!-- Language -->
+                        <div class="header__lang">
+                            <button data-lang="ru" class="btn-lang active">RU</button>
+                            <button data-lang="de" class="btn-lang">DE</button>
+                        </div>
+                        <!-- Callback -->
+                        <div class="header__callback">
+                            <button data-id="callback" class="btn-callback">Обратный звонок</button>
+                        </div>
+                    </div>
+
+                    <!-- Burger open -->
+                    <div class="header__button">
+                        <div class="burger" id="burger">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="web-center">
+                <div class="web-list">
+                    <a href="main.html">Главная</a>
+                    <a href="page-video.html">Страница 1 вариант</a>
+                    <a href="page-text.html">Страница 2 вариант</a>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="footer__group">
+                        <a class="footer__logo" href="index.html">Next step</a>
+                        <div class="footer__lang">
+                            <button data-lang="ru" class="btn-lang active">RU</button>
+                            <button data-lang="de" class="btn-lang">DE</button>
+                        </div>
+                        <a class="footer__politic" href="#">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer__grow-centered">
+                        <nav class="footer__nav">
+                            <ul class="menu">
+                                <li><a href="#">Impressum </a></li>
+                                <li><a href="#">AGB </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__buttons">
+                        <button type="button" class="btn-accent">Обратный звонок</button>
+                        <a href="#" class="btn-accent">Скачать презентацию</a>
+                        <a href="#" class="btn-accent">Записаться на диагностику бренда</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

@@ -12,7 +12,7 @@ HEADER
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		min-height: rem(70);
+		min-height: rem(73);
 	}
 
 	&__logo {
@@ -21,8 +21,11 @@ HEADER
 		color: var(--white);
 	}
 
+
 	&__nav {
+		padding-left: 12%;
 		@include md {
+			padding-left: 0;
 			position: fixed;
 			top: 0;
 			max-height: 100vh;
@@ -49,7 +52,7 @@ HEADER
 		ul.menu {
 			display: flex;
 			align-items: center;
-			gap: rem(25);
+			gap: rem(30);
 
 			@include md {
 				flex-direction: column;
@@ -108,13 +111,13 @@ HEADER
 			display: flex;
 
 			position: absolute;
-			top: 100%;
+			top: calc(100% + 5px);
 			left: 0;
 
 			transform: translateY(15px);
 
 			flex-direction: column;
-			gap: rem(7);
+			gap: rem(10);
 
 			border-radius: rem(10);
 			padding: rem(14) rem(20);
@@ -163,7 +166,7 @@ HEADER
 	&__group {
 		display: flex;
 		align-items: center;
-		gap: rem(30);
+		gap: rem(40);
 
 		@include md {
 			flex-direction: column;

@@ -2,6 +2,9 @@
 MAIN FIRST - 1
 --------------------------------------------------------------------------------------------------------------------------------*/
 .main-first {
+	.title-decor{
+		letter-spacing: 1.15px
+	}
 	&__block {
 		color: var(--white);
 		position: relative;
@@ -9,7 +12,7 @@ MAIN FIRST - 1
 		min-height: rem(712);
 
 		background-image: url("../../images/main/webp/main-1-bg.webp");
-		background-position: 65% bottom;
+		background-position: 65% 0%;
 
 		border-radius: 0 0 rem(100) rem(100);
 		@include md {
@@ -55,8 +58,8 @@ MAIN FIRST - 1
 		max-width: rem(270);
 
 		position: absolute;
-		top: 45%;
-		left: 15%;
+		top: 47.5%;
+		left: 14.5%;
 
 		@include sm {
 			text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
