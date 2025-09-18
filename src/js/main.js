@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			e.preventDefault();
 			e.stopPropagation();
 			const url = btn.dataset.video;
-			const previewUrl = btn.nextElementSibling ? btn.nextElementSibling : null;			
+			const previewUrl = btn.nextElementSibling ? btn.nextElementSibling : null;
 			openModal(videoModal, url, previewUrl ? previewUrl.src : null);
 		};
 	});
@@ -177,4 +177,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	};
+});
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------
+Инициализация AOS
+-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+AOS.init({
+	once: true, // Анимация срабатывает один раз
+	offset: 120, // Смещение перед срабатыванием
 });

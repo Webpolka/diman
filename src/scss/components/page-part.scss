@@ -75,13 +75,20 @@ PAGE PART
 	}
 	// item 3
 	.simplepage-desk-3 {
+
+		padding-block-start: rem(95);
+
 		&-item {
 			@include xxl {
 				.black-card {
+					&__description {
+						font-size: rem(16);
+					}
+
 					min-height: rem(192);
 				}
 			}
-		}		
+		}
 	}
 	// item 4
 	.simplepage-desk-4 {
@@ -102,7 +109,7 @@ PAGE PART
 	}
 	// item-41
 	.simplepage-desk-41 {
-		&-item:nth-child(1)  {
+		&-item:nth-child(1) {
 			@include xxl {
 				.black-card {
 					gap: rem(40);
@@ -119,7 +126,7 @@ PAGE PART
 			}
 		}
 	}
-	.black-card {		
+	.black-card {
 		height: 100%;
 	}
 }

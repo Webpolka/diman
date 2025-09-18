@@ -2,12 +2,16 @@
 BASE
 --------------------------------------------------------------------------------------------------------------------------------*/
 html {
-	scroll-behavior: smooth;	
+	scroll-behavior: smooth;
 }
 
 body {
+	margin: 0;
+	padding: 0;
+	transform-origin: top left; /* масштабируем из верхнего левого угла */
+
 	text-wrap: balance;
-	background-color: rgb(0,0,0);
+	background-color: rgb(0, 0, 0);
 }
 
 * {
@@ -61,7 +65,7 @@ body {
 	}
 	max-width: 100%;
 }
-.justify-content-center{
+.justify-content-center {
 	display: flex;
 }
 .img-responsive {
@@ -105,7 +109,7 @@ body {
 }
 
 .no-scroll {
-	overflow: hidden;	
+	overflow: hidden;
 }
 .no-event {
 	pointer-events: none;

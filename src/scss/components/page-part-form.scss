@@ -5,8 +5,7 @@ PAGE PART FORM
 	&-nextstep {
 		color: var(--white);
 
-		&__part {				
-
+		&__part {
 			position: relative;
 			&:before {
 				content: "";
@@ -26,6 +25,7 @@ PAGE PART FORM
 				input {
 					background-color: #262626;
 					border-color: rgb(255, 255, 255, 0.2);
+					color: var(--white);
 					&::placeholder {
 						color: var(--white);
 					}
