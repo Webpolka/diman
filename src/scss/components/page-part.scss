@@ -4,8 +4,8 @@ PAGE PART
 .simplepage {
 	color: var(--text);
 
-	&__header{
-		margin-bottom: rem(50);
+	&__header {
+		margin-bottom: rem(60);
 	}
 
 	&__title {
@@ -33,7 +33,7 @@ PAGE PART
 			font-size: rem(36);
 		}
 
-		margin-bottom: rem(10);
+		margin-bottom: rem(12);
 	}
 
 	&__description {
@@ -42,6 +42,7 @@ PAGE PART
 		text-align: center;
 		color: var(--black);
 
+		margin-top: 22px;
 		margin-bottom: rem(5);
 	}
 
@@ -66,14 +67,59 @@ PAGE PART
 		}
 
 		.section__title {
-			margin-bottom: rem(70);
+			margin-bottom: rem(58);
 			@include sm {
 				margin-bottom: rem(40);
 			}
 		}
 	}
-
-	.black-card {
+	// item 3
+	.simplepage-desk-3 {
+		&-item {
+			@include xxl {
+				.black-card {
+					min-height: rem(192);
+				}
+			}
+		}		
+	}
+	// item 4
+	.simplepage-desk-4 {
+		&-item:nth-child(1) {
+			@include xxl {
+				.black-card {
+					min-height: rem(178);
+				}
+			}
+		}
+		&-item:nth-child(5) {
+			@include xxl {
+				.black-card {
+					min-height: rem(159);
+				}
+			}
+		}
+	}
+	// item-41
+	.simplepage-desk-41 {
+		&-item:nth-child(1)  {
+			@include xxl {
+				.black-card {
+					gap: rem(40);
+					min-height: rem(192);
+				}
+			}
+		}
+		&-item:nth-child(5) {
+			@include xxl {
+				.black-card {
+					gap: rem(40);
+					min-height: rem(174);
+				}
+			}
+		}
+	}
+	.black-card {		
 		height: 100%;
 	}
 }

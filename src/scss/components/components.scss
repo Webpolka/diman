@@ -195,7 +195,7 @@ COMPONENTS
 	&__group {
 		display: flex;
 		align-items: start;
-		gap: rem(8);
+		gap: rem(10);
 
 		input:not([type="checkbox"], [type="radio"]) {
 			border: 1px solid rgba(0, 0, 0, 0.2);
@@ -213,7 +213,7 @@ COMPONENTS
 		}
 		.custom-checkbox {
 			position: relative;
-			top: -4px;
+			top: -5px;
 		}
 	}
 	&__group:nth-of-type(1) {
@@ -227,6 +227,8 @@ COMPONENTS
 		margin-top: rem(17);
 	}
 	.privacy {
+		position: relative;
+		top: -2px;
 		font-size: rem(14);
 		a {
 			color: var(--balck);
@@ -292,6 +294,9 @@ Black card
 		align-items: center;
 		justify-content: center;
 
+		color: var(--black);
+		font-weight: 700;
+
 		svg {
 			aspect-ratio: 1/1;
 			width: 51%;
@@ -321,7 +326,7 @@ Black card
 		font-weight: 700;
 		font-size: rem(16);
 
-		margin-bottom: rem(7);
+		margin-bottom: rem(5);
 	}
 
 	&__description {
@@ -336,7 +341,7 @@ Cases card
 	display: flex;
 	flex-direction: column;
 	gap: rem(10);
-	transition: all 0.2s  ease-in-out;
+	transition: all 0.2s ease-in-out;
 
 	.playlabel {
 		z-index: 1;
@@ -360,7 +365,7 @@ Cases card
 	&:hover {
 		filter: brightness(1.3);
 		.cases-card__text {
-			color: #412500;			
+			color: #412500;
 		}
 	}
 
@@ -570,12 +575,24 @@ White card
 
 	display: flex;
 	align-items: center;
-	gap: rem(15);
+	gap: rem(20);
 
 	min-height: rem(80);
 	height: 100%;
+	@include xxl {
+		max-height: rem(80);
+		height: 100%;
+	}
 
 	&--vertical {
+		min-height: rem(80);
+		height: 100%;
+		@include xxl {
+			min-height: rem(80);
+			max-height: initial;
+			height: 100%;
+		}
+
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: flex-start;

@@ -1,0 +1,78 @@
+/* --------------------------------------------------------------------------------------------------------------------------
+Video modal
+--------------------------------------------------------------------------------------------------------------------------------*/
+/* Модальное окно */
+.next-form-modal {
+	display: none; /* по умолчанию скрыто */
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto; /* включает прокрутку при необходимости */
+	background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный фон */
+	justify-content: center;
+	align-items: center;
+
+	&.modal--show {
+		display: flex;
+		animation: fade-up 0.3s ease-in-out forwards;
+	}
+
+	/* Контейнер содержимого модального окна */
+	&__content {
+		max-width: 387px;
+		width: calc(100vw - 30px);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+		position: relative;
+		border-radius: rem(20);
+		background-color: var(--white);
+		padding: rem(30);
+	}
+	/* Кнопка закрытия */
+	&__close {		
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		background: none;
+		border: none;
+		width: rem(12);
+		aspect-ratio: 1/1;	
+		cursor: pointer;
+		opacity: 0.75;
+		transition: all 0.3s ease-in-out;
+		background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMTEgMUwxIDExIiBzdHJva2U9ImJsYWNrIiAvPgogIDxwYXRoIGQ9Ik0xIDFMMTEgMTEiIHN0cm9rZT0iYmxhY2siIC8+Cjwvc3ZnPgo=');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	&__thanks {
+		font-size: 28px;
+		text-align: center;
+		color: var(--black);
+
+		margin-bottom: rem(5);
+	}
+
+	&__caption {
+		font-size: 14px;
+		text-align: center;
+		color: var(--black);
+
+		margin-bottom: rem(20);
+	}
+
+	.btn-accent {
+		display: inline-flex;
+		margin-inline: auto;
+	}
+	.request-form {
+		padding: 0;
+	}
+}

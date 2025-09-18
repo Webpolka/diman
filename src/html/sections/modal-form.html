@@ -1,0 +1,25 @@
+<!-- Модальное окно -->
+<div class="next-form-modal" id="formModal">
+	<div class="next-form-modal__content">
+		<button class="next-form-modal__close" data-modal="close"></button>
+		<form id="request-form-modal" class="request-form">
+			<h3 class="request-form__title">Оставьте заявку!</h3>
+			<p class="request-form__description">Мы свяжемся с вами и всё расскажем</p>
+			<div class="request-form__group">
+				<input type="text" placeholder="Имя" id="modal-name" name="name" autocomplete="on" required />
+			</div>
+			<div class="request-form__group">
+				<input type="phone" placeholder="Телефон" id="modal-phone" name="phone" autocomplete="on" required />
+			</div>
+
+			<div class="request-form__group">
+				<input class="custom-checkbox" type="checkbox" name="modal-privacy" id="modal-privacy" />
+				<label class="privacy" for="modal-privacy">Я согласен с <a href="#">политикой конфиденциальности</a></label>
+			</div>
+			<div class="justify-content-center">
+				<button type="submit" class="btn-accent">Связаться с нами</button>
+				<button type="button" data-modal="thanks" class="btn-accent">Перейти к благодарности</button>
+			</div>
+		</form>
+	</div>
+</div>

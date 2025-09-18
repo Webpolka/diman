@@ -61,6 +61,9 @@ body {
 	}
 	max-width: 100%;
 }
+.justify-content-center{
+	display: flex;
+}
 .img-responsive {
 	display: block;
 	width: 100%;
@@ -102,8 +105,7 @@ body {
 }
 
 .no-scroll {
-	overflow: hidden;
-	padding-right: 10px;
+	overflow: hidden;	
 }
 .no-event {
 	pointer-events: none;

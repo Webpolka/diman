@@ -12,12 +12,15 @@ PAGE BLOCK --- 5
 			color: var(--white);
 		}
 		.section__title {
-			margin-bottom: rem(70);
+			margin-bottom: rem(64);
 
 			@include sm {
 				margin-bottom: rem(40);
 			}
 		}
+
+		padding-block-start: rem(100);
+		padding-block-end: rem(100);
 
 		min-height: rem(150);
 		background: var(--black);
@@ -32,7 +35,7 @@ PAGE BLOCK --- 5
 				content: "";
 				position: absolute;
 				top: 0;
-				left: -37px;				
+				left: -37px;
 				height: rem(500);
 				// height: 50%;
 				background-image: url("../../images/blind-left.webp");
@@ -47,7 +50,7 @@ PAGE BLOCK --- 5
 				content: "";
 				position: absolute;
 				top: 0;
-				right: -37px;				
+				right: -37px;
 				height: rem(500);
 				// height: 50%;
 				background-image: url("../../images/blind-right.webp");
@@ -66,7 +69,7 @@ PAGE BLOCK --- 5
 				justify-self: flex-end;
 			}
 		}
-	}	
+	}
 
 	.white-card {
 		@include md {

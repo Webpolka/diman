@@ -14,6 +14,13 @@ MAIN FIRST - 1
         }
 	}
 
+	.page-banner{
+		transform: translateX(10px);
+		@include xl{
+			transform: translateX(0);
+		}
+	}
+
 	.section__title {
 		text-align: left;       
 		margin-bottom: rem(30);
@@ -87,7 +94,7 @@ MAIN FIRST - 1
 		font-size: rem(16);
 		line-height: 140%;
 
-		margin-bottom: rem(20);
+		margin-bottom: rem(30);
         
         @include xl{
             text-align: center;
@@ -108,7 +115,7 @@ MAIN FIRST - 1
             text-align: center;
         }
 		p {
-			margin-bottom: rem(15);
+			margin-bottom: rem(17);
 		}
 
         @include xl{

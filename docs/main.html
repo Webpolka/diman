@@ -55,7 +55,7 @@
                         </div>
                         <!-- Callback -->
                         <div class="header__callback">
-                            <button data-id="callback" class="btn-callback">Обратный звонок</button>
+                            <button data-modal="open" class="btn-callback">Обратный звонок</button>
                         </div>
                     </div>
 
@@ -541,11 +541,11 @@
                             <a href="#" class="cases-card cases-card--video">
                                 <div class="cases-card__image">
                                     <!-- if video -->
-                                    <button data-video="./video/video.mp4" class="playlabel">
+                                    <span data-video="./vendor/videos/video-1.mp4" class="playlabel">
                                         <svg class="icon icon--play">
                                             <use href="./icons/symbol/sprite.svg#play"></use>
                                         </svg>
-                                    </button>
+                                    </span>
 
                                     <img src="./images/main/webp/main-8-1.webp" alt="">
                                 </div>
@@ -602,11 +602,11 @@
                             <a href="#" class="cases-card cases-card--video">
                                 <div class="cases-card__image">
                                     <!-- if video -->
-                                    <button data-video="./video/video.mp4" class="playlabel">
+                                    <span data-video="./vendor/videos/video-2.mp4" class="playlabel">
                                         <svg class="icon icon--play">
                                             <use href="./icons/symbol/sprite.svg#play"></use>
                                         </svg>
-                                    </button>
+                                    </span>
                                     <img src="./images/main/webp/main-8-4.webp" alt="">
                                 </div>
                                 <div class="cases-card__tags">
@@ -769,6 +769,54 @@
         </footer>
 
     </div>
+
+    <!-- Модальное окно -->
+    <div class="next-video-modal" id="videoModal">
+        <div class="next-video-modal__content">
+            <span class="next-video-modal__close" data-modal="close">&times;</span>
+            <div class="next-video-modal__forvideo"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно благодарности -->
+    <div class="next-form-modal" id="thanksModal">
+        <div class="next-form-modal__content">
+            <button class="next-form-modal__close" data-modal="close"></button>
+            <h2 class="next-form-modal__thanks">Спасибо за заявку!</h2>
+            <p class="next-form-modal__caption">Мы скоро свяжемся с вами!</p>
+            <div class="justify-content-center">
+                <a href="/" class="btn-accent">На главную</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="next-form-modal" id="formModal">
+        <div class="next-form-modal__content">
+            <button class="next-form-modal__close" data-modal="close"></button>
+            <form id="request-form-modal" class="request-form">
+                <h3 class="request-form__title">Оставьте заявку!</h3>
+                <p class="request-form__description">Мы свяжемся с вами и всё расскажем</p>
+                <div class="request-form__group">
+                    <input type="text" placeholder="Имя" id="modal-name" name="name" autocomplete="on" required>
+                </div>
+                <div class="request-form__group">
+                    <input type="phone" placeholder="Телефон" id="modal-phone" name="phone" autocomplete="on" required>
+                </div>
+
+                <div class="request-form__group">
+                    <input class="custom-checkbox" type="checkbox" name="modal-privacy" id="modal-privacy">
+                    <label class="privacy" for="modal-privacy">Я согласен с <a href="#">политикой конфиденциальности</a></label>
+                </div>
+                <div class="justify-content-center">
+                    <button type="submit" class="btn-accent">Связаться с нами</button>
+                    <button type="button" data-modal="thanks" class="btn-accent">Перейти к благодарности</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
     <script src="./js/main.min.js"></script>
 
 </body>

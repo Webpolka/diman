@@ -2,7 +2,7 @@
 Video modal
 --------------------------------------------------------------------------------------------------------------------------------*/
 /* Стили для фона модального окна */
-.modal {
+.next-video-modal {
 	display: none; /* по умолчанию скрыто */
 	position: fixed;
 	z-index: 9999;
@@ -19,32 +19,31 @@ Video modal
 		display: flex;
 		animation: fade-up 0.3s ease-in-out forwards;
 	}
-}
+	// content
+	&__content {
+		position: relative;
+		max-width: 800px;
+		width: calc(100vw - 30px);
 
-/* Контейнер для видео */
-.modal-content {
-	position: relative;
-	max-width: 800px;
-	width: 100%;
-
-	video {
-		width: 100%;
-		aspect-ratio: 16/9;
+		video {
+			width: 100%;
+			aspect-ratio: 16/9;
+			object-fit: cover;
+		}
 	}
-}
+	// close
+	&__close {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		color: #aaa;
+		font-size: 28px;
+		font-weight: bold;
+		cursor: pointer;
+		z-index: 1000;
 
-/* Кнопка закрытия */
-.close {
-	position: absolute;
-	top: 10px;
-	right: 15px;
-	color: #aaa;
-	font-size: 28px;
-	font-weight: bold;
-	cursor: pointer;
-	z-index: 1000;
-}
-
-.close:hover {
-	color: #000;
+		&:hover {
+			color: #000;
+		}
+	}
 }

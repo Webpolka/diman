@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
-	@@include('html/components/head.html', { 'title': 'Главная' })
-
+	@@include('html/components/head.html', { 'title': 'Страница Text' })
+	<style>
+		.web-list {
+			display: flex;
+			flex-direction: column;
+			gap: rem(20);
+		}
+		.web-list a{
+			display: block;
+			font-size: 20px;
+			font-weight: 700;
+			color: green;
+		}
+		.web-list a:hover {
+			color: red;
+		}
+		.web-center{
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
 	<body>
-		<div class="wrapper">			
+		<div class="wrapper">
 			@@include('html/sections/header.html')
 			<main class="main">
-				@@include('html/sections/main-page/section-1-first.html')
-				@@include('html/sections/main-page/section-2-youget.html')
-				@@include('html/sections/main-page/section-3-whatwedoing.html')
-				@@include('html/sections/main-page/section-4-command.html')
-				@@include('html/sections/main-page/section-5-withyou.html')
-				@@include('html/sections/main-page/section-6-whywe.html')
-				@@include('html/sections/main-page/section-7-system.html')
-				@@include('html/sections/main-page/section-8-cases.html')
-				@@include('html/sections/main-page/section-9-next.html')
+				<div class="web-center">
+					<div class="web-list">
+						<a href="main.html">Главная</a>
+						<a href="page-small-video.html">Страница 1 вариант</a>
+						<a href="page-long-text.html">Страница 2 вариант</a>
+					</div>
+				</div>
 			</main>
-			@@include('html/sections/footer.html')			
+			@@include('html/sections/footer-page.html')
 		</div>
-		@@include('html/sections/modal-video.html')
-			
 		@@include('html/components/script.html')
 	</body>
 </html>

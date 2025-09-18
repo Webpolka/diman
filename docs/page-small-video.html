@@ -55,7 +55,7 @@
                         </div>
                         <!-- Callback -->
                         <div class="header__callback">
-                            <button data-id="callback" class="btn-callback">Обратный звонок</button>
+                            <button data-modal="open" class="btn-callback">Обратный звонок</button>
                         </div>
                     </div>
 
@@ -99,13 +99,13 @@
                             <!-- 2 -->
                             <div class="col-xl-6">
                                 <div class="page-banner page-banner--video">
-                                    <img src="./images/page/webp/page-1-4-thumb.webp" alt="">
                                     <!-- if video -->
-                                    <button data-video="./video/video.mp4" class="playlabel">
+                                    <button data-video="./vendor/videos/video-1.mp4" class="playlabel">
                                         <svg class="icon icon--play">
                                             <use href="./icons/symbol/sprite.svg#play"></use>
                                         </svg>
                                     </button>
+                                    <img src="./images/page/webp/page-1-4-thumb.webp" alt="">
                                 </div>
                             </div>
                         </div>
@@ -118,12 +118,12 @@
                 <h2 class="visually-hidden">Что входит</h2>
                 <div class="container simplepage__part">
                     <div class="section__title">
-                        <span>Что <span class="title-decor">Что входит</span></span>
+                        <span>Что <span class="title-decor">входит</span></span>
                     </div>
-
-                    <div class="row g-md-15 gx-40 gy-20">
+                    <!-- simplepage-desk-4 для того чтобы управлять высотой первого ряда карточек при десктопе-->
+                    <div class="row g-md-15 gx-40 gy-20 simplepage-desk-4">
                         <!-- 1 -->
-                        <div class="col-6 col-lg-4 col-xl-3">
+                        <div class="col-6 col-lg-4 col-xl-3 simplepage-desk-4-item">
                             <div class="black-card">
                                 <div class="black-card__row">
                                     <div class="black-card__label">
@@ -137,7 +137,7 @@
                             </div>
                         </div>
                         <!-- 2 -->
-                        <div class="col-6 col-lg-4 col-xl-3">
+                        <div class="col-6 col-lg-4 col-xl-3 simplepage-desk-4-item">
                             <div class="black-card">
                                 <div class="black-card__row">
                                     <div class="black-card__label">
@@ -151,7 +151,7 @@
                             </div>
                         </div>
                         <!-- 3 -->
-                        <div class="col-6 col-lg-4 col-xl-3">
+                        <div class="col-6 col-lg-4 col-xl-3 simplepage-desk-4-item">
                             <div class="black-card">
                                 <div class="black-card__row">
                                     <div class="black-card__label">
@@ -165,7 +165,7 @@
                             </div>
                         </div>
                         <!-- 4 -->
-                        <div class="col-6 col-lg-4 col-xl-3">
+                        <div class="col-6 col-lg-4 col-xl-3 simplepage-desk-4-item">
                             <div class="black-card">
                                 <div class="black-card__row">
                                     <div class="black-card__label">
@@ -179,7 +179,7 @@
                             </div>
                         </div>
                         <!-- 5 -->
-                        <div class="col-6 col-lg-4 col-xl-3">
+                        <div class="col-6 col-lg-4 col-xl-3 simplepage-desk-4-item">
                             <div class="black-card">
                                 <div class="black-card__row">
                                     <div class="black-card__label">
@@ -193,7 +193,7 @@
                             </div>
                         </div>
                         <!-- 6 -->
-                        <div class="col-6 col-lg-4 col-xl-3">
+                        <div class="col-6 col-lg-4 col-xl-3 simplepage-desk-4-item">
                             <div class="black-card">
                                 <div class="black-card__row">
                                     <div class="black-card__label">
@@ -387,6 +387,54 @@
         </footer>
 
     </div>
+
+    <!-- Модальное окно -->
+    <div class="next-video-modal" id="videoModal">
+        <div class="next-video-modal__content">
+            <span class="next-video-modal__close" data-modal="close">&times;</span>
+            <div class="next-video-modal__forvideo"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно благодарности -->
+    <div class="next-form-modal" id="thanksModal">
+        <div class="next-form-modal__content">
+            <button class="next-form-modal__close" data-modal="close"></button>
+            <h2 class="next-form-modal__thanks">Спасибо за заявку!</h2>
+            <p class="next-form-modal__caption">Мы скоро свяжемся с вами!</p>
+            <div class="justify-content-center">
+                <a href="/" class="btn-accent">На главную</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="next-form-modal" id="formModal">
+        <div class="next-form-modal__content">
+            <button class="next-form-modal__close" data-modal="close"></button>
+            <form id="request-form-modal" class="request-form">
+                <h3 class="request-form__title">Оставьте заявку!</h3>
+                <p class="request-form__description">Мы свяжемся с вами и всё расскажем</p>
+                <div class="request-form__group">
+                    <input type="text" placeholder="Имя" id="modal-name" name="name" autocomplete="on" required>
+                </div>
+                <div class="request-form__group">
+                    <input type="phone" placeholder="Телефон" id="modal-phone" name="phone" autocomplete="on" required>
+                </div>
+
+                <div class="request-form__group">
+                    <input class="custom-checkbox" type="checkbox" name="modal-privacy" id="modal-privacy">
+                    <label class="privacy" for="modal-privacy">Я согласен с <a href="#">политикой конфиденциальности</a></label>
+                </div>
+                <div class="justify-content-center">
+                    <button type="submit" class="btn-accent">Связаться с нами</button>
+                    <button type="button" data-modal="thanks" class="btn-accent">Перейти к благодарности</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
     <script src="./js/main.min.js"></script>
 
 </body>
